@@ -1,0 +1,15 @@
+[zh]
+languageName = "简体中文"
+title = "羊羽无寒"
+weight = 2
+
+[zh.params.sidebar]
+subtitle = "彻底意识到自己的无知是每一次进步的前奏"
+
+[en]
+languageName = "English"
+title = "Yangyuwuhan"
+weight = 1
+
+[en.params.sidebar]
+subtitle = "To be fully conscious of one's ignorance is the prelude to every real advance."
