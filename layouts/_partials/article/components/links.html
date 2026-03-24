@@ -1,39 +1,127 @@
+<style>
+    /* 链接页面样式 */
+    @media (min-width: 1024px) {
+        .article-list--compact.links {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .article-list--compact.links {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .article-list--compact.links {
+            background: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .article-list--compact.links article {
+        background: var(--card-background) !important;
+        border: none !important;
+        box-shadow: var(--shadow-l2) !important;
+        margin-bottom: 8px !important;
+        margin-right: 8px !important;
+        border-radius: 16px !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        overflow: hidden !important;
+    }
+
+    .article-list--compact.links article:hover {
+        transform: translateY(-5px) scale(1.02) !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .article-list--compact.links article>a {
+        display: flex !important;
+        align-items: center !important;
+        text-align: left !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        text-decoration: none !important;
+        color: var(--card-text-color-main) !important;
+    }
+
+    .article-list--compact.links .article-details {
+        flex-grow: 1 !important;
+        padding: 0 !important;
+        min-height: auto !important;
+    }
+
+    .article-list--compact.links .article-title {
+        margin: 0 !important;
+        font-size: 1.6rem !important;
+        color: var(--card-text-color-main) !important;
+        text-align: left !important;
+    }
+
+    .article-list--compact.links .article-meta {
+        font-size: 1.4rem !important;
+        color: var(--card-text-color-tertiary) !important;
+        line-height: 1.5 !important;
+        text-align: left !important;
+    }
+
+    .article-list--compact.links .article-image {
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .article-list--compact.links .article-image img {
+        width: 60px !important;
+        height: 60px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+</style>
+
 <div class="article-list--compact links">
     {{ range $link := .Params.links }}
-        <article>
-            <a href="{{ $link.website }}" target="_blank" rel="noopener">
-                <div class="article-details">
-                    <h2 class="article-title">
-                        {{- $link.title -}}
-                    </h2>
-                    <footer class="article-meta">
-                        {{ with $link.description }}
-                            {{ . }}
-                        {{ else }}
-                            {{ $link.website }}
-                        {{ end }}
-                    </footer>
-                </div>
+    <article>
+        <a href="{{ $link.website }}" target="_blank" rel="noopener">
+            <div class="article-details">
+                <h2 class="article-title">
+                    {{- $link.title -}}
+                </h2>
+                <footer class="article-meta">
+                    {{ with $link.description }}
+                    {{ . }}
+                    {{ else }}
+                    {{ $link.website }}
+                    {{ end }}
+                </footer>
+            </div>
 
-                {{- $image := partial "helper/image" (dict "Image" $link.image "Resources" $.Resources "Context" .) -}}
-                {{- with $image -}}
-                    <div class="article-image">
-                       {{ partial "helper/thumbnail-image" (dict 
-                            "Resource" .Resource
-                            "Width" 60
-                            "Height" 60
-                            "Resize" $.Site.Params.ImageProcessing.Thumbnail.Enabled
-                            "Attributes" (dict
-                                "src" $image.Permalink
-                                "alt" $link.title
-                                "loading" "lazy"
-                                "width" .Width
-                                "height" .Height
-                            )
-                        ) }}
-                    </div>
-                {{ end }}
-            </a>
-        </article>
+            {{- $image := partial "helper/image" (dict "Image" $link.image "Resources" $.Resources "Context" .) -}}
+            {{- with $image -}}
+            <div class="article-image">
+                {{ partial "helper/thumbnail-image" (dict
+                "Resource" .Resource
+                "Width" 60
+                "Height" 60
+                "Resize" $.Site.Params.ImageProcessing.Thumbnail.Enabled
+                "Attributes" (dict
+                "src" $image.Permalink
+                "alt" $link.title
+                "loading" "lazy"
+                "width" .Width
+                "height" .Height
+                )
+                ) }}
+            </div>
+            {{ end }}
+        </a>
+    </article>
     {{ end }}
 </div>

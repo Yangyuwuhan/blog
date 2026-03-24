@@ -3,7 +3,8 @@
 
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 <meta name='description' {{ printf "content=%q" $description | safeHTMLAttr }}>
-{{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+{{ with .Params.Keywords }}
+<meta name="keywords" content="{{ delimit . " , " }}">{{ end }}
 
 {{- $title := partial "data/title" . -}}
 <title>{{ $title }}</title>
@@ -20,18 +21,21 @@
 {{- partial "head/opengraph/include.html" . -}}
 
 {{- range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{- end -}}
 
 {{- $favicon := partial "helper/image" (dict "Image" .Site.Params.favicon "Resources" resources "Context" .) -}}
 {{ with $favicon }}
-    <link rel="shortcut icon" href="{{ .Permalink }}" />
+<link rel="shortcut icon" href="{{ .Permalink }}" />
 {{ end }}
 
 {{- if .Site.Params.cookies.enabled -}}
-    {{- partial "cookies/analytics.html" . -}}
+{{- partial "cookies/analytics.html" . -}}
 {{- else -}}
-    {{- template "_internal/google_analytics.html" . -}}
+{{- template "_internal/google_analytics.html" . -}}
 {{- end -}}
 
 {{- partial "head/custom.html" . -}}
+
+{{- /* Busuanzi page views counter */ -}}
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
