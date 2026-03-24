@@ -3,7 +3,7 @@ title: 关于
 slug: "About"
 description: 关于本站及其作者
 date: 2026-03-23
-lastmod: 2026-03-23
+lastmod: 2026-03-24
 menu:
     main: 
         weight: -90

@@ -1,7 +1,8 @@
 ---
-title: first blog
+title: First Blog
 date: 2026-03-23
-description: test the blog
+lastmod: 2026-03-24
+description: Turn on dark mode, and the entire universe will sparkle for you!
 categories:
     - Musings
 ---

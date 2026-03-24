@@ -1,5 +1,7 @@
 ---
 title: "链接"
+slug: "links"
+description: 一些实用和有趣的链接
 links:
   - title: GitHub
     description: GitHub 是世界上最大的代码托管平台，超1亿开发者正在使用。

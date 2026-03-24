@@ -66,11 +66,13 @@
         text-align: left !important;
     }
 
-    .article-list--compact.links .article-meta {
+    .article-list--compact.links .article-time {
         font-size: 1.4rem !important;
         color: var(--card-text-color-tertiary) !important;
         line-height: 1.5 !important;
         text-align: left !important;
+        display: block !important;
+        text-align-last: left !important;
     }
 
     .article-list--compact.links .article-image {
@@ -94,7 +96,7 @@
                 <h2 class="article-title">
                     {{- $link.title -}}
                 </h2>
-                <footer class="article-meta">
+                <footer class="article-time">
                     {{ with $link.description }}
                     {{ . }}
                     {{ else }}

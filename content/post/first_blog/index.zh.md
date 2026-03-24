@@ -1,7 +1,8 @@
 ---
 title: 第一篇博客
 date: 2026-03-23
-description: 测试博客功能
+lastmod: 2026-03-24
+description: 开启暗色模式，整个宇宙都将为你闪烁！
 categories:
     - Musings
 ---

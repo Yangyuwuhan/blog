@@ -1,5 +1,7 @@
 ---
 title: "Links"
+slug: "links"
+description: Same practical and interesting links
 links:
   - title: GitHub
     description: GitHub is the world's largest code hosting platform, used by over 100 million developers.

@@ -5,6 +5,10 @@ favicon = "img/avatar.png"
 [footer]
 since = 2026
 
+[dateFormat]
+published = "2006-01-02 Mon"
+lastUpdated = "2006-01-02 Mon"
+
 [sidebar]
 emoji = ""
 subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

@@ -1,13 +1,11 @@
 ! function () {
-    //封装方法，压缩之后减少文件大小
     function get_attribute(node, attr, default_value) {
         return node.getAttribute(attr) || default_value;
     }
-    //封装方法，压缩之后减少文件大小
     function get_by_tagname(name) {
         return document.getElementsByTagName(name);
     }
-    //检测是否为暗色模式（与 blog 项目保持一致）
+    //检测是否为暗色模式
     function isDarkMode() {
         // 检查 documentElement 的 dataset.scheme 属性
         return document.documentElement.dataset.scheme === 'dark';
@@ -25,7 +23,7 @@
             z: get_attribute(script, "zIndex", -1), //z-index
             o: get_attribute(script, "opacity", 0.8), //opacity - increased for more visible lines
             c: get_attribute(script, "color", defaultColor), //color
-            n: get_attribute(script, "count", 55) //count
+            n: get_attribute(script, "count", 75) //count
         };
     }
     //设置canvas的高宽
@@ -89,8 +87,20 @@
                 r.y += r.ya, //移动
                 r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1,
                 r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
-                context.fillStyle = "rgba(" + config.c + ", 1)";
-            context.fillRect(r.x - 0.5, r.y - 0.5, 3, 3); //绘制一个宽高为1的点
+                // 更新透明度，实现闪烁效果
+                r.opacity += r.opacitySpeed;
+            if (r.opacity > 1) {
+                r.opacity = 1;
+                r.opacitySpeed = -Math.abs(r.opacitySpeed); // 反向
+            } else if (r.opacity < 0) {
+                r.opacity = 0;
+                r.opacitySpeed = Math.abs(r.opacitySpeed); // 反向
+            }
+            context.fillStyle = "rgba(" + config.c + ", " + r.opacity + ")";
+            // 绘制圆形的点
+            context.beginPath();
+            context.arc(r.x, r.y, r.size / 2, 0, Math.PI * 2);
+            context.fill(); //绘制圆形的点
             for (i = 0; i < all_array.length; i++) {
                 e = all_array[i];
                 //不是当前点
@@ -111,9 +121,9 @@
                             // 当距离超过最大值的80%时，吸引力开始减弱
                             const attractionFactor = Math.max(0, (e.max - dist) / (e.max * 0.8));
                             if (attractionFactor > 0) {
-                                // 减少吸引力强度
-                                r.x -= 0.01 * x_dist * attractionFactor;
-                                r.y -= 0.01 * y_dist * attractionFactor;
+                                // 进一步减少吸引力强度
+                                r.x -= 0.0025 * x_dist * attractionFactor;
+                                r.y -= 0.0025 * y_dist * attractionFactor;
                             }
                         }
                     }
@@ -135,7 +145,7 @@
         current_point = {
             x: null, //当前鼠标x
             y: null, //当前鼠标y
-            max: 25000 //鼠标沾附距离 - increased for longer connections
+            max: 35000 //鼠标沾附距离 - increased for longer connections
         };
 
     the_canvas.id = canvas_id;
@@ -176,13 +186,19 @@
         var x = random() * canvas_width, //随机位置
             y = random() * canvas_height,
             xa = (2 * random() - 1) * 1.5, //增加初始速度
-            ya = (2 * random() - 1) * 1.5; //增加初始速度
+            ya = (2 * random() - 1) * 1.5, //增加初始速度
+            size = 1 + Math.random() * 5; // 随机大小，范围1-6，在创建时固定
+        opacity = Math.random(), // 初始透明度，范围0-1
+            opacitySpeed = (Math.random() - 0.5) * 0.04; // 透明度变化速度，增大范围使闪烁更明显
         random_lines.push({
             x: x,
             y: y,
             xa: xa,
             ya: ya,
-            max: 8000 //沾附距离 - increased for longer connections
+            size: size, // 存储点的大小
+            opacity: opacity, // 存储点的透明度
+            opacitySpeed: opacitySpeed, // 透明度变化速度
+            max: 12000 //沾附距离 - increased for longer connections
         });
     }
     //0.1秒后绘制
