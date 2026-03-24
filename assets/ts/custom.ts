@@ -1,2 +1,2 @@
-// Import cursor trail effect
-import '../js/cursor-trail.js';
+// Import canvas nest effect
+import '../js/canvas-nest.js';
