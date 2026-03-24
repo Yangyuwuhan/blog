@@ -17,13 +17,16 @@
             script = scripts[script_len - 1]; //当前加载的script
         //根据暗色模式设置默认颜色
         var defaultColor = isDarkMode() ? "255,255,255" : "0,0,0";
-        console.log('Canvas nest color:', defaultColor, 'Dark mode:', isDarkMode());
+        //根据屏幕宽度设置默认点数，手机端设为25，其他设备保持75
+        var isMobile = window.innerWidth < 768;
+        var defaultCount = isMobile ? 25 : 75;
+        console.log('Canvas nest color:', defaultColor, 'Dark mode:', isDarkMode(), 'Is mobile:', isMobile, 'Count:', defaultCount);
         return {
             l: script_len, //长度，用于生成id用
             z: get_attribute(script, "zIndex", -1), //z-index
             o: get_attribute(script, "opacity", 0.8), //opacity - increased for more visible lines
             c: get_attribute(script, "color", defaultColor), //color
-            n: get_attribute(script, "count", 75) //count
+            n: get_attribute(script, "count", defaultCount) //count
         };
     }
     //设置canvas的高宽
