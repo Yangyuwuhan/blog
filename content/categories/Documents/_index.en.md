@@ -2,8 +2,8 @@
 title: Documents
 description: "some documents"
 slug: "Documents"
-image: "hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg"
+image: ""
 style:
-    background: "#2a9d8f"
+    background: "#6ee8b5"
     color: "#fff"
 ---
