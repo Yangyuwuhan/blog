@@ -18,7 +18,13 @@ avatar = "img/avatar.png"
 [article.license]
 enabled = false
 default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
-
+[article.alertIcon]
+# Alert icons for different alert types (note, tip, important, warning, caution)
+note = "📝"
+tip = "💡"
+important = "📌"
+warning = "⚠️"
+caution = "🚨"
 [widgets]
 homepage = [
     { type = "search" },
@@ -29,8 +35,12 @@ page = [{ type = "toc" }]
 
 [comments]
 # See complete configuration in config/_default/params.toml
-enabled = false
-provider = "disqus"
+enabled = true
+provider = "utterances"
+[comments.utterances]
+repo = "Yangyuwuhan/blog"
+issueTerm = "pathname"
+label = "💬"
 
 # GDPR Cookie Consent Configuration
 # When enabled, analytics and functional cookies require user consent
