@@ -66,7 +66,8 @@
             {{ if $showPageViews }}
             {{ partial "helper/icon" "eye" }}
             <span class="article-page-views">
-                <span id="busuanzi_value_page_pv"></span> {{ T "article.pageViews" }}
+                <span id="busuanzi_value_page_pv_{{ $Page.RelPermalink | md5 }}"
+                    data-url="{{ $Page.RelPermalink }}"></span> {{ T "article.pageViews" }}
             </span>
             {{ end }}
         </div>
