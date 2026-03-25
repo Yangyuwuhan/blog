@@ -66,8 +66,15 @@
             {{ if $showPageViews }}
             {{ partial "helper/icon" "eye" }}
             <span class="article-page-views">
-                <span id="busuanzi_value_page_pv_{{ $Page.RelPermalink | md5 }}"
-                    data-url="{{ $Page.RelPermalink }}"></span> {{ T "article.pageViews" }}
+                {{ if $IsList }}
+                <span id="busuanzi_container_site_uv_{{ $Page.RelPermalink | md5 }}">
+                    <span id="busuanzi_value_site_uv_{{ $Page.RelPermalink | md5 }}"></span> {{ T "article.pageViews" }}
+                </span>
+                {{ else }}
+                <span id="busuanzi_container_site_uv">
+                    <span id="busuanzi_value_site_uv"></span> {{ T "article.pageViews" }}
+                </span>
+                {{ end }}
             </span>
             {{ end }}
         </div>
