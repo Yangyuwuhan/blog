@@ -13,6 +13,7 @@ categories:
 ### Country Lode,Take me home:天涯共此石
 
 ![天涯共此石](202510a.png)
+
 ![takemehome](202510b.png)
 
 ### 不是烟斗的烟斗
