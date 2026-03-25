@@ -6,3 +6,6 @@ menu:
         params:
             icon: home
 ---
+<!--more-->
+
+# 你好，欢迎打开我的博客！
