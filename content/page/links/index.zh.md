@@ -13,8 +13,20 @@ links:
     image: https://docs.astrbot.app/logo_prod.png
   - title: PDF24 tools
     description: 免费且易于使用的在线PDF工具
-    website: https://tools.pdf24.org/
+    website: https://tools.pdf24.org
     image:
+  - title: Z - Library
+    description: Z-Library 是世界上最大的在线图书馆之一，它拥有超过 27,300,000 的书籍和 91,137,000 的文章。
+    website: https://z.wwwnav.com/
+    image:
+  - title: S.H.I.T Journal
+    description: Sciences,Humanities,Information and Technology (目前需科学上网)
+    website: https://shitjournal.org
+    image: 
+  - title: Rubbish Journal
+    description: Rubbish 期刊，于荒漠中见同路人。
+    website: https://www.rubbish.press
+    image: 
 menu:
     main: 
         weight: -50

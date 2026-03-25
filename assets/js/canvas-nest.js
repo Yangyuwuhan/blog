@@ -190,7 +190,7 @@
             y = random() * canvas_height,
             xa = (2 * random() - 1) * 1.5, //增加初始速度
             ya = (2 * random() - 1) * 1.5, //增加初始速度
-            size = 1 + Math.random() * 5; // 随机大小，范围1-6，在创建时固定
+            size = 1 + Math.random() * 7; // 随机大小，范围1-8，在创建时固定
         opacity = Math.random(), // 初始透明度，范围0-1
             opacitySpeed = (Math.random() - 0.5) * 0.04; // 透明度变化速度，增大范围使闪烁更明显
         random_lines.push({
