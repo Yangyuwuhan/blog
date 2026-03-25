@@ -25,7 +25,7 @@
 
     {{ $showDate := not $Page.Date.IsZero }}
     {{ $showWordCount := true }}
-    {{ $showPageViews := true }}
+    {{ $showPageViews := not $IsList }}
     {{ $showTime := or $showDate $showWordCount $showPageViews }}
     {{ $showTags := and $Page.Site.Params.Article.List.ShowTags ($Page.GetTerms "tags") $IsList }}
 
@@ -66,7 +66,7 @@
             {{ if $showPageViews }}
             {{ partial "helper/icon" "eye" }}
             <span class="article-page-views">
-                <span class="page-view-count" data-url="{{ $Page.RelPermalink }}">0</span> {{ T "article.pageViews" }}
+                <span id="busuanzi_value_page_pv"></span> {{ T "article.pageViews" }}
             </span>
             {{ end }}
         </div>
