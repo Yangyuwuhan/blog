@@ -43,7 +43,8 @@ Enable the right sidebar if
 {{ end }}
 
 {{ define "right-sidebar" }}
-{{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ else }}
+{{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ else if eq
+.RelPermalink "/" }}
 {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}
 {{ end }}

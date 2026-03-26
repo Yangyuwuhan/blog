@@ -27,15 +27,22 @@
         }
     }
 
+    /* 链接卡片样式 */
     .article-list--compact.links article {
-        background: var(--card-background) !important;
-        border: none !important;
+        background: rgba(255, 255, 255, 0.01) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
         box-shadow: var(--shadow-l2) !important;
         margin-bottom: 8px !important;
         margin-right: 8px !important;
         border-radius: 16px !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
         overflow: hidden !important;
+    }
+
+    .article-list--compact.links article:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
     }
 
     .article-list--compact.links article:hover {
