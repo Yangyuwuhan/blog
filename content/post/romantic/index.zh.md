@@ -12,13 +12,13 @@ categories:
 
 ### Country Lode,Take me home:天涯共此石
 
-![天涯共此石](202510a.png)
+![](202510a.png)
 
-![takemehome](202510b.png)
+![](202510b.png)
 
 ### 不是烟斗的烟斗
 
-![不是烟斗的烟斗](202511a.jpg)
+![](202511a.jpg)
 
 <!--more-->
 
@@ -27,6 +27,12 @@ categories:
 ### 所以到底成什么像 😯
 
 ![女孩转身](20260325a.jpg)
+
+### 如同昨夜天光乍破了远山的轮廓
+
+![](20260326a.jpeg)
+
+{{</* bilibili "BV1qG411m7Jq" */>}}
 
 ---
 
