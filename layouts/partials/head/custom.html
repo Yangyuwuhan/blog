@@ -130,12 +130,12 @@
         color: var(--card-text-color-tertiary);
     }
 
-    /* 归档页面样式 */
-    @media (min-width: 768px) {
+    /* 归档页面样式 - 与链接页面保持一致 */
+    @media (min-width: 1024px) {
         main.main.full-width .article-list--compact.archives {
             display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            background: transparent !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
+            background: none !important;
             box-shadow: none !important;
             gap: 1rem !important;
         }
@@ -161,18 +161,21 @@
 
         main.main.full-width .article-list--compact.archives article>a {
             display: flex !important;
+            flex-direction: row !important;
             align-items: center !important;
             text-align: left !important;
             padding: 20px !important;
             gap: 15px !important;
             text-decoration: none !important;
             color: var(--card-text-color-main) !important;
+            width: 100% !important;
         }
 
         main.main.full-width .article-list--compact.archives .article-details {
             flex-grow: 1 !important;
             padding: 0 !important;
             min-height: auto !important;
+            text-align: left !important;
         }
 
         main.main.full-width .article-list--compact.archives .article-title-row {
@@ -184,7 +187,7 @@
 
         main.main.full-width .article-list--compact.archives .article-title {
             margin: 0 !important;
-            font-size: 1.8rem !important;
+            font-size: 1.6rem !important;
             color: var(--card-text-color-main) !important;
             text-align: left !important;
             flex-grow: 1 !important;
@@ -200,10 +203,6 @@
             white-space: nowrap !important;
         }
 
-        main.main.full-width .article-list--compact.archives .article-details {
-            text-align: left !important;
-        }
-
         main.main.full-width .article-list--compact.archives .article-meta {
             text-align: left !important;
             display: block !important;
@@ -211,8 +210,8 @@
 
         main.main.full-width .article-list--compact.archives .article-subtitle {
             font-size: 1.4rem !important;
-            color: var(--card-text-color-secondary) !important;
-            line-height: 1.4 !important;
+            color: var(--card-text-color-tertiary) !important;
+            line-height: 1.5 !important;
             text-align: left !important;
             margin-bottom: 8px !important;
             display: block !important;
@@ -231,10 +230,39 @@
         }
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        main.main.full-width .article-list--compact.archives {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+
+        main.main.full-width .article-list--compact.archives article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 8px !important;
+            margin-right: 8px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+            overflow: hidden !important;
+        }
+
+        main.main.full-width .article-list--compact.archives article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-5px) scale(1.02) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+
     /* 移动端样式 */
     @media (max-width: 767px) {
         main.main.full-width .article-list--compact.archives {
-            background: transparent !important;
+            background: none !important;
             box-shadow: none !important;
         }
 
