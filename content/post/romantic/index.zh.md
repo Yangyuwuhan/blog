@@ -32,7 +32,7 @@ categories:
 
 ![](20260326a.jpeg)
 
-{{</* bilibili "BV1qG411m7Jq" */>}}
+{{< bilibili "BV1qG411m7Jq" >}}
 
 ---
 
