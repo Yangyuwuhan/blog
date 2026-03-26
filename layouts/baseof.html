@@ -10,7 +10,8 @@
         {{/* The container is wider when there's any activated widget */}}
         {{- $hasWidget := false -}}
         {{- range .Site.Params.widgets -}}
-            {{- if gt (len .) 0 -}}
+            {{- $widgets := . -}}
+            {{- if gt (len $widgets) 0 -}}
                 {{- $hasWidget = true -}}
             {{- end -}}
         {{- end -}}
