@@ -25,6 +25,7 @@ tip = "💡"
 important = "📌"
 warning = "⚠️"
 caution = "🚨"
+
 [widgets]
 homepage = [
     { type = "search" },
