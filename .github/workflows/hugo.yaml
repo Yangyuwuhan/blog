@@ -60,6 +60,8 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      - name: 创建 CNAME 文件
+        run: echo "yangyuwuhan.fun" > public/CNAME
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
