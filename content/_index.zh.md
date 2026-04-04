@@ -20,4 +20,4 @@ pie title 做我朋友的好处
     "   " : 34
 ```
 
-`<span style="display:inline-block;width:20px;height:20px;background-color:red;margin-right:5px;">`财富 `<span style="display:inline-block;width:20px;height:20px;background-color:blue;margin-right:5px;">`名声 `<span style="display:inline-block;width:20px;height:20px;background-color:yellow;margin-right:5px;">`权力
+<span style="display:inline-block;width:20px;height:20px;background-color:red;margin-right:5px;"></span>财富 <span style="display:inline-block;width:20px;height:20px;background-color:blue;margin-right:5px;"></span>名声 <span style="display:inline-block;width:20px;height:20px;background-color:yellow;margin-right:5px;"></span>权力
