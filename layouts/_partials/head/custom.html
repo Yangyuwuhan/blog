@@ -1,0 +1,416 @@
+﻿<style>
+    /* 链接页面样式 - 使用更具体的选择器 */
+    @media (min-width: 1024px) {
+        main.main.full-width .article-list--compact.links {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+
+        main.main.full-width .article-list--compact.links article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 8px !important;
+            margin-right: 8px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+        }
+
+        main.main.full-width .article-list--compact.links article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-5px) scale(1.02) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        main.main.full-width .article-list--compact.links article>a {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            text-align: left !important;
+            padding: 20px !important;
+            gap: 15px !important;
+        }
+
+        main.main.full-width .article-list--compact.links .article-details {
+            flex-grow: 1 !important;
+            padding: 0 !important;
+            min-height: auto !important;
+            text-align: left !important;
+        }
+
+        main.main.full-width .article-list--compact.links .article-title {
+            margin: 0 !important;
+            font-size: 1.6rem !important;
+            text-align: left !important;
+        }
+
+        main.main.full-width .article-list--compact.links .article-meta {
+            font-size: 1.4rem !important;
+            color: var(--card-text-color-tertiary) !important;
+            line-height: 1.5 !important;
+            text-align: left !important;
+            display: block !important;
+            text-align-last: left !important;
+        }
+
+        main.main.full-width .article-list--compact.links .article-image {
+            margin: 0 !important;
+            flex-shrink: 0 !important;
+        }
+
+        main.main.full-width .article-list--compact.links .article-image img {
+            width: 60px !important;
+            height: 60px !important;
+            object-fit: cover !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        main.main.full-width .article-list--compact.links {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+
+        main.main.full-width .article-list--compact.links article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 8px !important;
+            margin-right: 8px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+        }
+
+        main.main.full-width .article-list--compact.links article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-5px) scale(1.02) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+
+    /* 移动端样式 */
+    @media (max-width: 767px) {
+        main.main.full-width .article-list--compact.links {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        main.main.full-width .article-list--compact.links article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 16px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+        }
+
+        main.main.full-width .article-list--compact.links article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+
+    /* 竖线分隔符样式 */
+    .inline-meta .separator {
+        margin: 0 8px;
+        color: var(--card-text-color-tertiary);
+    }
+
+    /* 归档页面和分类页面样式 - 与链接页面保持一致 */
+    @media (min-width: 1024px) {
+
+        main.main.full-width .is-categories-page-post,
+        main.main.full-width .is-categories-page-tile {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+
+        main.main.full-width .is-categories-page-post article,
+        main.main.full-width .is-categories-page-tile article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 8px !important;
+            margin-right: 8px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+            overflow: hidden !important;
+        }
+
+        main.main.full-width .is-categories-page-post article:hover,
+        main.main.full-width .is-categories-page-tile article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-5px) scale(1.02) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        main.main.full-width .is-categories-page-post article>a,
+        main.main.full-width .is-categories-page-tile article>a {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            text-align: left !important;
+            padding: 20px !important;
+            gap: 15px !important;
+            text-decoration: none !important;
+            color: var(--card-text-color-main) !important;
+            width: 100% !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-details,
+        main.main.full-width .is-categories-page-tile .article-details {
+            flex-grow: 1 !important;
+            padding: 0 !important;
+            min-height: auto !important;
+            text-align: left !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-title-row,
+        main.main.full-width .is-categories-page-tile .article-title-row {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            margin-bottom: 8px !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-title,
+        main.main.full-width .is-categories-page-tile .article-title {
+            margin: 0 !important;
+            font-size: 1.6rem !important;
+            color: var(--card-text-color-main) !important;
+            text-align: left !important;
+            flex-grow: 1 !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-time,
+        main.main.full-width .is-categories-page-tile .article-time {
+            font-size: 1.4rem !important;
+            color: var(--card-text-color-tertiary) !important;
+            line-height: 1.5 !important;
+            text-align: right !important;
+            display: inline-block !important;
+            margin-left: 15px !important;
+            white-space: nowrap !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-meta,
+        main.main.full-width .is-categories-page-tile .article-meta {
+            text-align: left !important;
+            display: block !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-subtitle,
+        main.main.full-width .is-categories-page-tile .article-subtitle {
+            font-size: 1.4rem !important;
+            color: var(--card-text-color-tertiary) !important;
+            line-height: 1.5 !important;
+            text-align: left !important;
+            margin-bottom: 8px !important;
+            display: block !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-image,
+        main.main.full-width .is-categories-page-tile .article-image {
+            margin: 0 !important;
+            flex-shrink: 0 !important;
+        }
+
+        main.main.full-width .is-categories-page-post .article-image img,
+        main.main.full-width .is-categories-page-tile .article-image img {
+            width: 60px !important;
+            height: 60px !important;
+            object-fit: cover !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+
+        main.main.full-width .is-categories-page-post,
+        main.main.full-width .is-categories-page-tile {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            background: none !important;
+            box-shadow: none !important;
+            gap: 1rem !important;
+        }
+
+        main.main.full-width .is-categories-page-post article,
+        main.main.full-width .is-categories-page-tile article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 8px !important;
+            margin-right: 8px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+            overflow: hidden !important;
+        }
+
+        main.main.full-width .is-categories-page-post article:hover,
+        main.main.full-width .is-categories-page-tile article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-5px) scale(1.02) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+
+    /* 移动端样式 */
+    @media (max-width: 767px) {
+
+        main.main.full-width .is-categories-page-post,
+        main.main.full-width .is-categories-page-tile {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        main.main.full-width .is-categories-page-post article,
+        main.main.full-width .is-categories-page-tile article {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: var(--shadow-l2) !important;
+            margin-bottom: 16px !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+            overflow: hidden !important;
+        }
+
+        main.main.full-width .is-categories-page-post article:hover,
+        main.main.full-width .is-categories-page-tile article:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+</style>
+<style>
+/* Ϊ���з���ҳ��� header section-card ����ë����Ч�� */
+main.main .section-card {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+main.main .section-card:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-5px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+</style>
+
+<style> .test-custom {} </style>
+
+<style>
+/* 为右侧边栏小部件增加毛玻璃效果 */
+.widget-archive--list .archives-year > a, .widget .tagCloud-tags a {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+.widget-archive--list .archives-year > a:hover, .widget .tagCloud-tags a:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-5px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+</style>
+
+</style>
+
+<style>
+/* 去除归档列表原本所在大卡片的白色底色和阴影，让它回归透明 */
+.widget-archive--list {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 去掉归档列表项之间的下划线分割 */
+.widget-archive--list .archives-year:not(:last-of-type) {
+    border-bottom: none !important;
+}
+
+/* 为右侧边栏的小部件内部单独的按钮/输入框增加毛玻璃效果 */
+.widget-archive--list .archives-year > a, 
+.widget .tagCloud-tags a, 
+.search-form.widget input, .template-search .search-form input {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    border-radius: 12px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+}
+
+/* 归档列表按钮增加一点边距，以免黏在一起 */
+.widget-archive--list .archives-year > a {
+    margin-bottom: 10px;
+}
+
+.widget-archive--list .archives-year > a:hover, 
+.widget .tagCloud-tags a:hover, 
+.search-form.widget input:focus, .template-search .search-form input:focus {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-3px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 修复由于input添加毛玻璃后层级提升，导致绝对定位的搜索label文本被覆盖掩藏的问题 */
+.search-form.widget label, .template-search .search-form label {
+    z-index: 2 !important;
+}
+
+/* 确保input的自身层级位于label之下 */
+.search-form.widget input, .template-search .search-form input {
+    position: relative;
+    z-index: 1;
+}
+/* 搜索页面结果卡片毛玻璃效果 */
+.template-search .article-list--compact article {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    margin-bottom: 16px !important;
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+.template-search .article-list--compact article:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-3px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+</style>

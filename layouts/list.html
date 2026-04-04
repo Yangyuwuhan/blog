@@ -1,4 +1,4 @@
-{{ define "main" }}
+﻿{{ define "main" }}
     <header>
         <h3 class="section-title">
             {{ if eq .Parent (.GetPage "/") }}
@@ -49,7 +49,7 @@
         <aside>
             <h2 class="section-title">{{ T "list.subsection" (len $subsections) }}</h2>
             <div class="subsection-list">
-                <div class="article-list--tile">
+                <div class="article-list--tile {{ if eq $.Type `categories` }}is-categories-page-tile{{ end }}">
                     {{ range . }}
                         {{ partial "article-list/tile" . }}
                     {{ end }}
@@ -61,7 +61,7 @@
     {{/* List only pages that are not a subsection */}}
     {{ $paginator := partial "helper/paginator.html" . }}
     {{ with $paginator }}
-        <section class="article-list--compact">
+        <section class="article-list--compact {{ if eq $.Type `categories` }}archives is-categories-page-post{{ end }}">
             {{ range .Pages }}
                 {{ partial "article-list/compact" . }}
             {{ end }}
