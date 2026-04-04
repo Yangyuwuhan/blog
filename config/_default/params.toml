@@ -51,3 +51,6 @@ enabled = false
 [cookies.categories]
 analytics = true
 functional = true
+[colorScheme]
+    toggle = true
+    default = "dark"
