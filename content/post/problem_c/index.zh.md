@@ -109,7 +109,7 @@ int main() {
 >[!CAUTION]
 >转置部分不能写成：
 >
->```C
+>```c
 >void work1(int t[][10], int m, int n) {
 >  // 与上述代码的区别在于 i,j 的范围
 >  for (int i = 0; i < m; i++) {
