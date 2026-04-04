@@ -1,10 +1,11 @@
-<script src="https://utteranc.es/client.js" 
+﻿<script src="https://utteranc.es/client.js" 
         repo="{{ .Site.Params.comments.utterances.repo }}"
         issue-term="{{ .Site.Params.comments.utterances.issueTerm }}"
         {{ with .Site.Params.comments.utterances.label }}
         label="{{ . }}"
         {{ end }}
-        crossorigin="anonymous"
+        {{ if eq .Site.Language.Lang "zh" }}lang="zh-CN"{{ end }}
+crossorigin="anonymous"
         async
         >
 </script>
@@ -44,3 +45,4 @@
         setUtterancesTheme(e.detail)
     })
 </script>
+

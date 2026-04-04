@@ -1,6 +1,6 @@
-<script src="https://utteranc.es/client.js" repo="{{ .Site.Params.comments.utterances.repo }}"
+﻿<script src="https://utteranc.es/client.js" repo="{{ .Site.Params.comments.utterances.repo }}"
     issue-term="{{ .Site.Params.comments.utterances.issueTerm }}" {{ with .Site.Params.comments.utterances.label }}
-    label="{{ . }}" {{ end }} lang="{{ .Site.Language.Lang }}" crossorigin="anonymous" async>
+    label="{{ . }}" {{ end }} lang="{{ if eq .Site.Language.Lang "zh" }}zh-CN{{ else }}{{ .Site.Language.Lang }}{{ end }}" theme="preferred-color-scheme"`n    crossorigin="anonymous" async>
     </script>
 
 <style>
@@ -38,3 +38,5 @@
         setUtterancesTheme(e.detail)
     })
 </script>
+
+

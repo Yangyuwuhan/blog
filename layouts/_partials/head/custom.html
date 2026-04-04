@@ -422,4 +422,130 @@ main.main .section-card:hover {
     box-shadow: var(--shadow-l2) !important;
     border-radius: var(--card-border-radius, 16px) !important;
 }
+/* 归档文章下的相关文章毛玻璃效果及去除图片预留 */
+.subsection-list .article-list--tile article {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    border-radius: var(--card-border-radius, 16px) !important;
+    height: auto !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+.subsection-list .article-list--tile article:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-3px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 隐藏相关文章中的图片部分 */
+.subsection-list .article-list--tile article .article-image {
+    display: none !important;
+}
+
+/* 取消原本图片上的绝对定位和预留比例，改为普通的内边距排版 */
+.subsection-list .article-list--tile article a {
+    display: block !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 20px 24px !important; /* 调整卡片内边距 */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* 取消深色渐变图片覆盖背景以及绝对局底 */
+.subsection-list .article-list--tile article .article-details {
+    position: static !important;
+    background: none !important; /* 移除内联的linear-gradient */
+    padding: 0 !important;       /* 将边距交给上层的a标签 */
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* 调整标题文字，由于移除了图片遮罩，标题应该按正常文字颜色显示（支持暗色模式自适应） */
+.subsection-list .article-list--tile article .article-title {
+    color: var(--body-text-color) !important;
+    text-shadow: none !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+/* 归档文章下的相关文章毛玻璃效果及去除图片预留 */
+.subsection-list .article-list--tile article {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-l2) !important;
+    border-radius: var(--card-border-radius, 16px) !important;
+    height: auto !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+.subsection-list .article-list--tile article:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transform: translateY(-3px) scale(1.01) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 隐藏相关文章中的图片部分 */
+.subsection-list .article-list--tile article .article-image {
+    display: none !important;
+}
+
+/* 取消原本图片上的绝对定位和预留比例，改为普通的内边距排版 */
+.subsection-list .article-list--tile article a {
+    display: block !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 20px 24px !important; /* 调整卡片内边距 */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* 取消深色渐变图片覆盖背景以及绝对局底 */
+.subsection-list .article-list--tile article .article-details {
+    position: static !important;
+    background: none !important; /* 移除内联的linear-gradient */
+    padding: 0 !important;       /* 将边距交给上层的a标签 */
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* 调整标题文字，由于移除了图片遮罩，标题应该按正常文字颜色显示（支持暗色模式自适应） */
+.subsection-list .article-list--tile article .article-title {
+    color: var(--body-text-color) !important;
+    text-shadow: none !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+
+
 </style>
