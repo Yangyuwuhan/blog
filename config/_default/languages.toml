@@ -6,6 +6,8 @@ lang = "zh"
 
 [zh.params.sidebar]
 subtitle = "彻底意识到自己的无知是每一次进步的前奏"
+[zh.params.comments.giscus]
+lang = "zh-CN"
 
 [en]
 languageName = "English"
@@ -15,3 +17,5 @@ lang = "en"
 
 [en.params.sidebar]
 subtitle = "To be fully conscious of one's ignorance is the prelude to every real advance."
+[en.params.comments.giscus]
+lang = "en"

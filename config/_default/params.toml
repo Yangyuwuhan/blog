@@ -37,11 +37,20 @@ page = [{ type = "toc" }]
 [comments]
 # See complete configuration in config/_default/params.toml
 enabled = true
-provider = "utterances"
-[comments.utterances]
+provider = "giscus"
+
+[comments.giscus]
 repo = "Yangyuwuhan/blog"
-issueTerm = "pathname"
-label = "💬"
+repoID = "R_kgDORueC3Q"
+category = "Announcements"
+categoryID = "DIC_kwDORueC3c4C6HNf"
+mapping = "pathname"
+strict = "0"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+lightTheme = "light"
+darkTheme = "dark"
 
 # GDPR Cookie Consent Configuration
 # When enabled, analytics and functional cookies require user consent
@@ -52,5 +61,5 @@ enabled = false
 analytics = true
 functional = true
 [colorScheme]
-    toggle = true
-    default = "dark"
+toggle = true
+default = "dark"

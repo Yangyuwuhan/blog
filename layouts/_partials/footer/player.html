@@ -3,7 +3,7 @@
 
 
 <script>
-    const staticDir = "{{ .Site.Home.Permalink }}" + 'music/';
+    const staticDir = "{{ site.BaseURL }}music/";
     const songs = [
         "稻香-周杰伦",
         "夜曲-周杰伦",
@@ -35,7 +35,7 @@
     const ap = new APlayer({
         fixed: true,
         listFolded: false,
-        listMaxHeight: '90px',
+        listMaxHeight: '150px',
         lrcType: 3,
         container: document.getElementById('aplayer'),
         audio: audios

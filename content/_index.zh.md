@@ -6,12 +6,11 @@ menu:
         params:
             icon: home
 layout: single
-title: 欢迎来到我的博客!
+title: 羊羽无寒
 date: 2026-03-25
 lastmod: 
-description:
+description: "欢迎来到我的博客！"
 ---
-
 ```mermaid
 pie title 做我朋友的好处
     " " : 33
@@ -19,8 +18,9 @@ pie title 做我朋友的好处
     "   " : 34
 ```
 
-<span style="display:inline-block;width:20px;height:20px;background-color:red;margin-right:5px;"></span>财富 <span style="display:inline-block;width:20px;height:20px;background-color:blue;margin-right:5px;"></span>名声 <span style="display:inline-block;width:20px;height:20px;background-color:yellow;margin-right:5px;"></span>权力
-
+- <span style="display:inline-block;width:20px;height:20px;background-color:red;margin-right:5px;"></span> 财富
+<span style="display:inline-block;width:20px;height:20px;background-color:blue;margin-right:5px;"></span> 名声
+<span style="display:inline-block;width:20px;height:20px;background-color:yellow;margin-right:5px;"></span> 权利
 
 > [!TIP]
 > 点击左下角的箭头可以开启背景音乐
