@@ -51,25 +51,14 @@
         }
         // 切换歌曲
         ap.list.switch(playInfo.index);
-
-        // 轮询等待音频加载完毕再执行下一步
-        let checkCount = 0;
-        let checkInterval = setInterval(() => {
-            // readyState >= 1 意味着音频的元数据(时长等)已加载，可以进行 seek
-            // 增加 checkCount > 10（即 500ms）超时的兼容操作，防止移动端拦截自动加载导致的死循环
-            if (ap.audio.readyState >= 1 || checkCount > 10) {
-                clearInterval(checkInterval);
-                try {
-                    // 调整时长
-                    ap.seek(playInfo.currentTime);
-                    // 是否播放
-                    if (!playInfo.paused) {
-                        let playPromise = ap.play();
-                        if (playPromise && playPromise.catch) playPromise.catch(() => { });
-                    }
-                } catch (e) { }
+        // 等待500ms再执行下一步(切换歌曲需要点时间，不能立马调歌曲进度条)
+        setTimeout(() => {
+            // 调整时长
+            ap.seek(playInfo.currentTime);
+            // 是否播放
+            if (!playInfo.paused) {
+                ap.play()
             }
-            checkCount++;
-        }, 50);
+        }, 500);
     };
 </script>
