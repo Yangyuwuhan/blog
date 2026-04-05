@@ -21,5 +21,6 @@ pie title 做我朋友的好处
 
 <span style="display:inline-block;width:20px;height:20px;background-color:red;margin-right:5px;"></span>财富 <span style="display:inline-block;width:20px;height:20px;background-color:blue;margin-right:5px;"></span>名声 <span style="display:inline-block;width:20px;height:20px;background-color:yellow;margin-right:5px;"></span>权力
 
+
 > [!TIP]
 > 点击左下角的箭头可以开启背景音乐
