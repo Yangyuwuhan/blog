@@ -35,6 +35,8 @@ categories:
 1 5 9 13
 ```
 
+### 题解
+
 <details>
 <summary>提示</summary>
 
@@ -43,9 +45,8 @@ categories:
 </details>
 
 <details>
-<summary>题解</summary>
+<summary>解答</summary>
 
-### 题解
 
 ```C
 #include <stdio.h>
