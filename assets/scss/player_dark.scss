@@ -81,13 +81,15 @@
         z-index: 99;
         overflow: visible;
         max-width: 400px;
-        box-shadow: none
+        box-shadow: none;
+        background: transparent !important;
     }
 
     .aplayer.aplayer-fixed .aplayer-list {
         margin-bottom: 65px;
         border: 1px solid #000000;
-        border-bottom: none
+        border-bottom: none;
+        background: rgba(66, 66, 66, .8);
     }
 
     .aplayer.aplayer-fixed .aplayer-body {
@@ -97,7 +99,7 @@
         right: 0;
         margin: 0;
         z-index: 99;
-        background: rgba(0, 0, 0, .8);
+        background: linear-gradient(to right, rgba(0, 0, 0, .8) calc(100% - 18px), transparent calc(100% - 18px));
         padding-right: 18px;
         transition: all .3s ease;
         max-width: 400px
@@ -128,6 +130,7 @@
         transition: all .3s ease;
         border-bottom: none;
         border-top: 1px solid #626262;
+        border-right: 1px solid #626262;
         background: #424242
     }
 
@@ -146,7 +149,18 @@
     }
 
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        width: 66px !important
+        width: 0 !important;
+        height: 66px;
+        background: transparent;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-pic {
+        display: none;
+    }
+
+    .aplayer.ap0-fixed.aplayer-narrow .aplayer-miniswitcher {
+        display: block;
+        right: -18px;
     }
 
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-miniswitcher .aplayer-icon {
@@ -669,7 +683,7 @@
         right: 0;
         bottom: 0;
         height: 100%;
-        background: #1B1C1D;
+        background: transparent;
         width: 18px;
         border-radius: 0 2px 2px 0
     }
@@ -683,7 +697,7 @@
     }
 
     .aplayer .aplayer-miniswitcher .aplayer-icon path {
-        fill: #626262
+        fill: #ccc
     }
 
     .aplayer .aplayer-miniswitcher .aplayer-icon:hover path {
