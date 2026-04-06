@@ -423,7 +423,7 @@ main.main .section-card:hover {
     border-radius: var(--card-border-radius, 16px) !important;
 }
 /* 归档文章下的相关文章毛玻璃效果及去除图片预留 */
-.subsection-list .article-list--tile article {
+aside .subsection-list .article-list--tile article {
     background: rgba(255, 255, 255, 0.01) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
@@ -435,19 +435,19 @@ main.main .section-card:hover {
     overflow: hidden !important;
 }
 
-.subsection-list .article-list--tile article:hover {
+aside .subsection-list .article-list--tile article:hover {
     background: rgba(255, 255, 255, 0.03) !important;
     transform: translateY(-3px) scale(1.01) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* 隐藏相关文章中的图片部分 */
-.subsection-list .article-list--tile article .article-image {
+aside .subsection-list .article-list--tile article .article-image {
     display: none !important;
 }
 
 /* 取消原本图片上的绝对定位和预留比例，改为普通的内边距排版 */
-.subsection-list .article-list--tile article a {
+aside .subsection-list .article-list--tile article a {
     display: block !important;
     position: relative !important;
     min-height: 0 !important;
@@ -460,7 +460,7 @@ main.main .section-card:hover {
 }
 
 /* 取消深色渐变图片覆盖背景以及绝对局底 */
-.subsection-list .article-list--tile article .article-details {
+aside .subsection-list .article-list--tile article .article-details {
     position: static !important;
     background: none !important; /* 移除内联的linear-gradient */
     padding: 0 !important;       /* 将边距交给上层的a标签 */
@@ -473,7 +473,7 @@ main.main .section-card:hover {
 }
 
 /* 调整标题文字，由于移除了图片遮罩，标题应该按正常文字颜色显示（支持暗色模式自适应） */
-.subsection-list .article-list--tile article .article-title {
+aside .subsection-list .article-list--tile article .article-title {
     color: var(--body-text-color) !important;
     text-shadow: none !important;
     font-size: 1.8rem !important;
@@ -485,7 +485,7 @@ main.main .section-card:hover {
     text-align: center !important;
 }
 /* 归档文章下的相关文章毛玻璃效果及去除图片预留 */
-.subsection-list .article-list--tile article {
+aside .subsection-list .article-list--tile article {
     background: rgba(255, 255, 255, 0.01) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
@@ -497,19 +497,19 @@ main.main .section-card:hover {
     overflow: hidden !important;
 }
 
-.subsection-list .article-list--tile article:hover {
+aside .subsection-list .article-list--tile article:hover {
     background: rgba(255, 255, 255, 0.03) !important;
     transform: translateY(-3px) scale(1.01) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* 隐藏相关文章中的图片部分 */
-.subsection-list .article-list--tile article .article-image {
+aside .subsection-list .article-list--tile article .article-image {
     display: none !important;
 }
 
 /* 取消原本图片上的绝对定位和预留比例，改为普通的内边距排版 */
-.subsection-list .article-list--tile article a {
+aside .subsection-list .article-list--tile article a {
     display: block !important;
     position: relative !important;
     min-height: 0 !important;
@@ -522,7 +522,7 @@ main.main .section-card:hover {
 }
 
 /* 取消深色渐变图片覆盖背景以及绝对局底 */
-.subsection-list .article-list--tile article .article-details {
+aside .subsection-list .article-list--tile article .article-details {
     position: static !important;
     background: none !important; /* 移除内联的linear-gradient */
     padding: 0 !important;       /* 将边距交给上层的a标签 */
@@ -535,7 +535,7 @@ main.main .section-card:hover {
 }
 
 /* 调整标题文字，由于移除了图片遮罩，标题应该按正常文字颜色显示（支持暗色模式自适应） */
-.subsection-list .article-list--tile article .article-title {
+aside .subsection-list .article-list--tile article .article-title {
     color: var(--body-text-color) !important;
     text-shadow: none !important;
     font-size: 1.8rem !important;
